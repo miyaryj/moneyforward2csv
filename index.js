@@ -1,5 +1,10 @@
 const fs = require("fs");
 const csv = require("csv");
+const commandLineArgs = require("command-line-args");
+
+const optionDefinitions = [{ name: "target", alias: "t", type: String }];
+const options = commandLineArgs(optionDefinitions);
+const path = options["target"];
 
 const src = {};
 
@@ -13,7 +18,6 @@ drawAssetTimeSeriesTrendChart = (categoriesData, timeSeriesData) => {
 };
 
 // read
-const path = "./data/ryoji_sbi_20200609.js";
 require(path);
 
 const rows = src.categoriesData.map((key, i) => {
