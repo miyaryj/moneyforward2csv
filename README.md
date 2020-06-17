@@ -5,7 +5,7 @@ A script to convert data taken from MoneyForward to a CSV.
 ## Usage
 
 ```
-npm start --target ./data/your_data.js
+npm start -- --target ./data/your_data.js
 ```
 
 ## How to get MoneyForward data
